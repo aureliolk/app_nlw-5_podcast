@@ -1,6 +1,7 @@
 import styles from './style.module.scss'
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
+import Link from 'next/link'
 
 
 export function Header(){
@@ -10,7 +11,9 @@ export function Header(){
 
     return(
         <header className={styles.headerContainer}>
-            <img src="/logo.svg" alt="Logo"/>
+            <Link href={'/'}>
+                <img src="/logo.svg" alt="Logo"/>
+            </Link>
             <p>Inteligencia LTDA</p>
             <span>{currentDate}</span>
         </header>
